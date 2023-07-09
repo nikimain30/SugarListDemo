@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SugarListDemo</string>
+    <string name="app_name">Sugar</string>
+    <string name="date">Date: %1$s</string>
 </resources>
