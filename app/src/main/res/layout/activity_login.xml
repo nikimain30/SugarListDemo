@@ -141,6 +141,7 @@
             android:layout_marginRight="@dimen/_10sdp"
             android:textColor="@color/red"
             android:textStyle="bold"
+            android:visibility="gone"
             android:text="Forgot password?"/>
 
 

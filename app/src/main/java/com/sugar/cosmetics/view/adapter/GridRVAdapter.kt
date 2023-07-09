@@ -1,5 +1,6 @@
 package com.sugar.cosmetics.view.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +19,8 @@ class GridRVAdapter(
     private var layoutInflater: LayoutInflater? = null
     private lateinit var title: TextView
     private lateinit var rates: TextView
+
+
     override fun getCount(): Int {
         return key.size
     }
@@ -30,23 +33,18 @@ class GridRVAdapter(
         return 0
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var convertView = convertView
-        // on blow line we are checking if layout inflater
-        // is null, if it is null we are initializing it.
+
         if (layoutInflater == null) {
             layoutInflater =
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         }
-        // on the below line we are checking if convert view is null.
-        // If it is null we are initializing it.
+
         if (convertView == null) {
-            // on below line we are passing the layout file
-            // which we have to inflate for each item of grid view.
             convertView = layoutInflater!!.inflate(R.layout.gridview_item, null)
         }
-        // on below line we are initializing our course image view
-        // and course text view with their ids.
         title = convertView!!.findViewById(R.id.textView_title)
         rates = convertView!!.findViewById(R.id.textView_rates)
         // on below line we are setting image for our course image view.

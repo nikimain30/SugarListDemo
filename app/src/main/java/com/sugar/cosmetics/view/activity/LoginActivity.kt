@@ -20,7 +20,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     private fun setListener() {
         btnLogin.setOnClickListener {
-            println("Click")
             activityNavigator.navigateToHome(this)
         }
     }
